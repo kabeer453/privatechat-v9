@@ -1,0 +1,11 @@
+# Optional example deployment descriptor for a Node/WebSocket host.
+# Adjust the provider-specific fields to your hosting service.
+services:
+  - type: web
+    name: privatechat-v3
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
